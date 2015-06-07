@@ -122,7 +122,7 @@ However, as a beginner, let's stick with the standard `(strong, nonatomic)` attr
 
 
 ####Property type and name
-Finally, we tell the program what type the property is, and then give it a name. As you can see, we do not include an underscore before the name of the property. However if we access the instance variable within the property, it will by default, include the underscore. (We won't get into that here, but just know that if you see the underscore, you are again looking at an instance variable.)
+Finally, we tell the program what type the property is, and then give it a name. As you can see, we do not include an underscore before the name of the property. However if we access the instance variable within the property, it will, by default, include the underscore. (We won't get into that here, but just know that if you see the underscore, you are again looking at an instance variable.)
 
 
 ###Accessing properties
@@ -169,7 +169,7 @@ In more recent versions of xcode, Apple made it such that simply by declaring a 
 }
 ```
 
-What is wrong with the above? By trying to set the property rather than the instance variable with in the setter (or returning the property from the getter), we will find ourselves within an infinite loop. Recall that the property is actually shorthand for an instance variable, a setter method, and a getter method. So the following is another way to write what we have just above:
+What is wrong with the above? By trying to set the property, rather than the instance variable within the setter (or by trying to return the property from within the getter), we will find ourselves within an infinite loop. Recall that the property is actually shorthand for an instance variable, a setter method, and a getter method. So the following is another way to write what we have just above:
 
 ######Example
 ```objc
